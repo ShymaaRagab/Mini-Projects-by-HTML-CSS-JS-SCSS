@@ -1,0 +1,129 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f8;
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 45px;
+}
+.title h1 {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: 700;
+  color: #102a42;
+  position: relative;
+}
+.title h1::before {
+  content: "";
+  position: absolute;
+  font-size: 0px;
+  border-top-width: 3px;
+  border-right-width: 85px;
+  border-color: #c59d5f;
+  border-style: solid;
+  bottom: -15px;
+  transform: translateX(53px);
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+.menu-btn button {
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 16px;
+  background-color: transparent;
+  color: #c59d5f;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #c59d5f #102a42 #102a42 #c59d5f;
+  transition: all 0.3s linear;
+}
+.menu-btn button:hover {
+  background-color: #c59d5f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ourMenu {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 40px 30px;
+  margin: 0 10%;
+}
+.ourMenu article {
+  display: flex;
+  gap: 20px;
+}
+.ourMenu article img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border: 5px solid #c59d5f;
+  border-radius: 10px;
+}
+.ourMenu article .item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 3px;
+  color: #102a42;
+  padding-bottom: 5px;
+  border-bottom: 2px #617d98 dotted;
+}
+.ourMenu article .item-info p {
+  color: #c59d5f;
+}
+.ourMenu article .text-info {
+  padding: 20px 0px;
+  color: #617d98;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ourMenu {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ourMenu {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ourMenu {
+    grid-template-columns: repeat(1, auto);
+  }
+  .ourMenu article {
+    display: block;
+    margin: 5px auto;
+    width: 400px;
+  }
+  .ourMenu article img {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .ourMenu article .text-info {
+    font-size: 14px;
+  }
+}

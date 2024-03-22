@@ -1,0 +1,100 @@
+@use "../Sass/variables/colorVariables" as *;
+@use "../Sass/variables/transitions" as *;
+@use "../Sass/helpers/mixins" as *;
+@use "../Sass/layout/globelRules" as *;
+
+%headAndPra {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+section {
+  h1 {
+    text-transform: capitalize;
+    font-size: 40px;
+    color: $darkfontColor;
+    margin: {
+      top: 85px;
+      bottom: 10px;
+    }
+    @extend %headAndPra;
+  }
+  .mainPra {
+    @extend %headAndPra;
+    color: $lightfontColor;
+    font-size: 15px;
+    margin-bottom: 60px;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  width: 90vw;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: 20rem;
+    border-radius: 10px;
+    transition: $basicTransition;
+    &:hover {
+      object-fit: cover;
+    }
+  }
+}
+.content {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.allButton {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  & :first-child {
+    border-top-left-radius: 10px;
+  }
+  & :last-child {
+    border-top-right-radius: 10px;
+  }
+  button {
+    background-color: #fff;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: $darkfontColor;
+    font-size: 18px;
+    padding: 17px 10px;
+    transition: $basicTransition;
+    letter-spacing: 2px;
+    &:not(.active) {
+      background-color: $graylight;
+    }
+    &:hover:not(.active) {
+      color: $blueColor;
+      background-color: $babyblue;
+    }
+  }
+}
+
+.box-info {
+  display: none;
+  padding: 30px 25px;
+  line-height: 1.5;
+  h4 {
+    text-transform: capitalize;
+    color: $darkfontColor;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  p {
+    color: $lightfontColor;
+    font-size: 15px;
+  }
+  ul {
+    margin-top: 10px;
+    list-style: none;
+  }
+}
+.active {
+  display: block;
+}

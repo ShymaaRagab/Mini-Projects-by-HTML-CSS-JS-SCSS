@@ -1,0 +1,105 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f8;
+  font-family: sans-serif;
+}
+
+section .mainPra, section h1 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+section h1 {
+  text-transform: capitalize;
+  font-size: 40px;
+  color: #102a42;
+  margin-top: 85px;
+  margin-bottom: 10px;
+}
+section .mainPra {
+  color: #617d98;
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  width: 90vw;
+  margin: 0 auto;
+}
+.container img {
+  width: 100%;
+  height: 20rem;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+.container img:hover {
+  object-fit: cover;
+}
+
+.content {
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.allButton {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.allButton :first-child {
+  border-top-left-radius: 10px;
+}
+.allButton :last-child {
+  border-top-right-radius: 10px;
+}
+.allButton button {
+  background-color: #fff;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: #102a42;
+  font-size: 18px;
+  padding: 17px 10px;
+  transition: all 0.3s linear;
+  letter-spacing: 2px;
+}
+.allButton button:not(.active) {
+  background-color: #d9e2ed;
+}
+.allButton button:hover:not(.active) {
+  color: #49a6e9;
+  background-color: #ebf7ff;
+}
+
+.box-info {
+  display: none;
+  padding: 30px 25px;
+  line-height: 1.5;
+}
+.box-info h4 {
+  text-transform: capitalize;
+  color: #102a42;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.box-info p {
+  color: #617d98;
+  font-size: 15px;
+}
+.box-info ul {
+  margin-top: 10px;
+  list-style: none;
+}
+
+.active {
+  display: block;
+}

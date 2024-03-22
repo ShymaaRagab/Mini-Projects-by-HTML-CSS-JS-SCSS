@@ -1,0 +1,96 @@
+@use "../Sass/variables/colorVariables" as *;
+@use "../Sass/variables/transitions" as *;
+@use "../Sass/helpers/mixins" as *;
+@use "../Sass/layout/globelRules" as *;
+
+.title {
+  margin: {
+    top: 15vh;
+    bottom: 50px;
+  }
+  h1 {
+    font: {
+      family: "Great Vibes", cursive;
+      size: 38px;
+    }
+    color: $goldColor;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+}
+.ques_ans {
+  @include CenterByFlex;
+  flex-direction: column;
+}
+.box {
+  width: 620px;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px 1px #ccc;
+}
+.questionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  p {
+    letter-spacing: 0.08cm;
+    font-family: sans-serif;
+    color: $darkfontColor;
+  }
+}
+button {
+  border: 3px solid $goldColor;
+  background-color: #fff;
+  width: 23px;
+  height: 23px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: $basicTransition;
+  .plus {
+    color: $goldColor;
+    font: 600 27px/19px sans-serif;
+  }
+  .minus {
+    visibility: hidden;
+    color: $goldColor;
+  }
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+.answer {
+  display: none;
+  position: relative;
+  margin: 10px;
+  padding-top: 10px;
+  color: $lightfontColor;
+  border-top: 1px solid $lineColor;
+  p {
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+.showAnswer {
+  button {
+    transition: $basicTransition;
+    .plus {
+      display: none;
+    }
+    .minus {
+      visibility: visible;
+    }
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+  .answer {
+    transition: $basicTransition;
+    display: block;
+  }
+}

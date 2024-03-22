@@ -1,0 +1,127 @@
+@use "../Sass/layout/globelRules";
+@use "../Sass/variables/colorVariables" as *;
+@use "../Sass/variables/transitions" as *;
+@use "../Sass/helpers/mixins" as *;
+
+.title {
+  text-align: center;
+  margin: {
+    top: 70px;
+    bottom: 45px;
+  }
+  h1 {
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font: {
+      size: 40px;
+      weight: 700;
+    }
+    color: $darkfontColor;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      font-size: 0px;
+      border: {
+        top-width: 3px;
+        right-width: 85px;
+        color: $goldColor;
+        style: solid;
+      }
+      bottom: -15px;
+      transform: translateX(53px);
+    }
+  }
+}
+
+.menu-btn {
+  @include CenterByFlex;
+  gap: 10px;
+  margin-bottom: 60px;
+  button {
+    text-align: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: transparent;
+    color: $goldColor;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: {
+      style: solid;
+      width: 2px;
+      color: $goldColor $darkfontColor $darkfontColor $goldColor;
+    }
+    transition: $basicTransition;
+    &:hover {
+      background-color: $goldColor;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.ourMenu {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 40px 30px;
+  margin: 0 10%;
+  article {
+    display: flex;
+    gap: 20px;
+    img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      border: 5px solid $goldColor;
+      border-radius: 10px;
+    }
+    .item-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      letter-spacing: 3px;
+      color: $darkfontColor;
+      p {
+        color: $goldColor;
+      }
+      padding-bottom: 5px;
+      border-bottom: 2px $lightfontColor dotted;
+    }
+    .text-info {
+      padding: 20px 0px;
+      color: $lightfontColor;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@include BreakPointsScreen(medium) {
+  .ourMenu {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@include BreakPointsScreen(small) {
+  .ourMenu {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@include BreakPointsScreen(mobile) {
+  .ourMenu {
+    grid-template-columns: repeat(1, auto);
+    article {
+      display: block;
+      margin: 5px auto;
+      width: 400px;
+      img {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 10px;
+      }
+      .text-info {
+        font-size: 14px;
+      }
+    }
+  }
+}

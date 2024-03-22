@@ -1,0 +1,83 @@
+@use "../../variables/colorForScrollPage" as *;
+@use "../../helpers/mixins" as *;
+@use "../../variables/transitions" as *;
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+    url("./hero-bcg.jpeg") center/cover no-repeat;
+}
+%FlexStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  padding: 1rem 1.5rem;
+  .main-nav {
+    .scroll {
+      height: 100px;
+      background-color: $primaryBackground;
+    }
+    @extend %FlexStyle;
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+.logo {
+  img {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.links {
+  ul {
+    list-style: none;
+    @extend %FlexStyle;
+    gap: 25px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+.facePage {
+  @include CenterByFlex;
+  flex-direction: column;
+  height: 600px;
+  color: #fff;
+  h1 {
+    font: 700 60px/90px sans-serif;
+    letter-spacing: 3px;
+  }
+  p {
+    width: 650px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  button {
+    background-color: transparent;
+    border: 2px #fff solid;
+    width: 210px;
+    height: 42px;
+    color: #fff;
+    margin-top: 20px;
+    font: 300 15px/42px sans-serif;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #fff;
+      color: $popColor;
+      cursor: pointer;
+      transition: $basicTransition;
+    }
+  }
+}

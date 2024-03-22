@@ -1,0 +1,136 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f8;
+  font-family: sans-serif;
+}
+
+header {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(63, 208, 212, 0.5)), to(rgba(0, 0, 0, 0.7))), url("./hero-bcg.jpeg") center/cover no-repeat;
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url("./hero-bcg.jpeg") center/cover no-repeat;
+}
+
+.links ul, nav .main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  padding: 1rem 1.5rem;
+}
+nav .main-nav {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+nav .main-nav .scroll {
+  height: 100px;
+  background-color: #fff;
+}
+
+.logo img {
+  width: 65px;
+  height: 65px;
+}
+
+.links ul {
+  list-style: none;
+  gap: 25px;
+}
+.links ul a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.facePage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 600px;
+  color: #fff;
+}
+.facePage h1 {
+  font: 700 60px/90px sans-serif;
+  letter-spacing: 3px;
+}
+.facePage p {
+  width: 650px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.facePage button {
+  background-color: transparent;
+  border: 2px #fff solid;
+  width: 210px;
+  height: 42px;
+  color: #fff;
+  margin-top: 20px;
+  font: 300 15px/42px sans-serif;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.facePage button:hover {
+  background-color: #fff;
+  color: #40cfd4;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+section {
+  height: 600px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+section h2 {
+  color: #102a42;
+}
+section span {
+  color: #40cfd4;
+}
+
+#service {
+  background-color: #fff;
+}
+
+footer {
+  background-color: #102a42;
+  text-align: center;
+  height: 180px;
+  font: 200 16px/180px sans-serif;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  color: #fff;
+}

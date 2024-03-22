@@ -1,0 +1,11 @@
+@use "../../variables/colorForScrollPage" as *;
+
+footer {
+  background-color: $titleColor;
+  text-align: center;
+  height: 180px;
+  font: 200 16px/180px sans-serif;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  color: $primaryBackground;
+}

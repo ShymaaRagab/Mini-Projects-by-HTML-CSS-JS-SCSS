@@ -1,0 +1,69 @@
+@use "../Sass/variables/colorVariables" as *;
+@use "../Sass/variables/transitions" as *;
+@use "../Sass/helpers/mixins" as *;
+@use "../Sass/layout/globelRules" as *;
+
+header {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+  }
+  h1 {
+    color: #fff;
+    font: {
+      size: 60px;
+      weight: 700;
+    }
+  }
+  button {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    color: $blueColor;
+    background: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    transition: $basicTransition;
+    .close {
+      position: absolute;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      background-color: $blueColor;
+      border-radius: 10px;
+      transition: all 0.3s linear;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+}
+.pause-play {
+  .close {
+    left: 75px;
+  }
+}
